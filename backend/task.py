@@ -6,7 +6,7 @@ from pydantic import BaseModel
 app = APIRouter()
 
 class Notes(BaseModel):
-    text: str
+    txt: str
 
 class NotesData(Notes):
     id_note: int
@@ -16,12 +16,12 @@ async def root():
     return db.get_task()
 
 @app.post("/add/")
-async def add(notes: Notes):
-    db.add_note(notes.text)
+async def add(note: Notes):
+    db.add_note(note.txt)
 
 @app.put("/editnote/")
 async def edit(note: NotesData):
-    db.edit_note(note.id_note, note.text)
+    db.edit_note(note.id_note, note.txt)
 
 
 @app.delete("/delete/id={id_note}")

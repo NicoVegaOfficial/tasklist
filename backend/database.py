@@ -8,7 +8,7 @@ conn = pymysql.connect(
     )
 
 def get_task():
-    sql = "select * from notes;"
+    sql = "select note, created_at from notes;"
     cur = conn.cursor()
     cur.execute(sql)
     output = cur.fetchall()

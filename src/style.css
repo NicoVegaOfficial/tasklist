@@ -1,0 +1,40 @@
+::selection {
+	background-color: #00b809;
+}
+
+*{
+	font-family: 'Kanit', sans-serif;
+}
+body{
+	background-color: rgb(21, 21 , 21);
+}
+
+h1, h2, p, a{
+	color: white;
+}
+
+.nota{
+    margin: 12px;
+    padding: 6px;
+    border-style: solid;
+    border-color: #00b809;
+}
+
+#textNote{
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 15px;
+    font-size: 25px;
+}
+
+#postNew{
+    background-color: #00b809;
+    font-size: 25px;
+    float: right;
+    border-radius: 8px;
+    border-style: none;
+    margin-top: 12px;
+    padding: 8px;
+    font-size: 25px;
+}
